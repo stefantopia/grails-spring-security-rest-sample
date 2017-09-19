@@ -60,7 +60,7 @@ grails.project.dependency.resolution = {
 
         compile ":spring-security-core:2.0-RC2"
 
-        compile ":spring-security-rest:1.3.0.RC2", {
+        compile ":spring-security-rest:1.3.3", {
             excludes 'spring-security-core', 'cors'
         }
     }

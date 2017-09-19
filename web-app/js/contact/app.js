@@ -6,7 +6,7 @@ angular.module('contact', [])
         var headers = { 'X-Auth-Token': '' };
 
         $scope.facebookContacts = function(){
-            $http.get('http://localhost:8080/grails-spring-security-rest-sample/contacts/facebook', {headers: headers})
+            $http.get('http://192.168.86.132:8080/grails-spring-security-rest-sample/contacts/facebook', {headers: headers})
                 .success(function(data){
                     $scope.result = data;
                 })
@@ -19,7 +19,7 @@ angular.module('contact', [])
         };
 
         $scope.authenticate = function(){
-            $http.post('http://localhost:8080/grails-spring-security-rest-sample/api/login',
+            $http.post('http://192.168.86.132:8080/grails-spring-security-rest-sample/api/login',
                        {username: $scope.user.username, password: $scope.user.password})
                 .success(function(result){
                     $scope.result = result;
